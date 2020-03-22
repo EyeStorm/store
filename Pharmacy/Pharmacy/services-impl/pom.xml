@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>mm.pharmacy</groupId>
+        <artifactId>root</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>services-impl</artifactId>
+    <packaging>jar</packaging>
+    <name>Project Module - Service Implementation</name>
+    <description>
+        Module that contains services implementation defined on Service API module.
+        Depends of Repository Module and Service API Module.
+    </description>
+
+    <dependencies>
+
+        <!-- Project Modules -->
+        <dependency>
+            <groupId>mm.pharmacy</groupId>
+            <artifactId>repositories</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mm.pharmacy</groupId>
+            <artifactId>services-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
