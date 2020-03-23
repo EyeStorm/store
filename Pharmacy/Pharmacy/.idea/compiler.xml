@@ -8,35 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="services-impl" />
+        <module name="repositories" />
         <module name="services-api" />
         <module name="models" />
-        <module name="repositories" />
         <module name="screen" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="demo" target="1.8" />
-      <module name="models" target="1.8" />
-      <module name="Pharmacy" target="1.8" />
-      <module name="repositories" target="1.8" />
-      <module name="screen" target="1.8" />
-      <module name="screen (1)" target="1.8" />
-      <module name="services-api" target="1.8" />
-      <module name="services-impl" target="1.8" />
-      <module name="sqlite-db-sample" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Pharmacy" options="-parameters" />
-      <module name="demo" options="-parameters" />
       <module name="models" options="-parameters" />
       <module name="repositories" options="-parameters" />
       <module name="screen" options="-parameters" />
-      <module name="screen (1)" options="-parameters" />
       <module name="services-api" options="-parameters" />
       <module name="services-impl" options="-parameters" />
-      <module name="sqlite-db-sample" options="-parameters" />
     </option>
   </component>
 </project>

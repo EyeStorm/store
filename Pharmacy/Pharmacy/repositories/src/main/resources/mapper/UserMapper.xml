@@ -8,7 +8,6 @@
         <result column="AGE" javaType="int" property="age"/>
     </resultMap>
 
-
     <select id="selectByUserId" resultMap="UserResultMap">
         select u.* from HM_USER as u where u.USER_ID = #{id}
     </select>

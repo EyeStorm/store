@@ -2,26 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       https://www.springframework.org/schema/context/spring-context.xsd
-       http://mybatis.org/schema/mybatis-spring
-       http://mybatis.org/schema/mybatis-spring.xsd">
+       https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Scan the JavaConfig -->
-    <context:component-scan base-package="mm.pharmacy.repositories" />
-   <mybatis:scan
-        base-package="mm.pharmacy.repositories.orm.mybatis"
-    />
-<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="typeAliasesPackage" value="mm.pharmacy.entities" />
-        <property name="typeHandlersPackage" value="mm.pharmacy.repositories.orm.mybatis" />
-        <property name="mapperLocations" value="classpath:/mapper/*.xml" />
-    </bean>
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="mm.pharmacy.repositories" />
-    </bean>-->
+    <context:component-scan base-package="mm.pharmacy.repositories"/>
 </beans>

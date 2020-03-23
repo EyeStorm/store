@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/context
        https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <import resource="classpath:repositories-beans.xml"/>
+<!--    <import resource="classpath:repositories-beans.xml"/>-->
     <!-- Scan the JavaConfig -->
     <context:component-scan base-package="mm.pharmacy.services" />
 </beans>
