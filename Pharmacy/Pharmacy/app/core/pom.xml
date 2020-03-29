@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>mm.pharmacy</groupId>
+    <artifactId>root</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>core</artifactId>
+  <packaging>jar</packaging>
+  <name>Project App Module - Core</name>
+  <description>Core JavaFX loader</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.jfoenix</groupId>
+      <artifactId>jfoenix</artifactId>
+      <version>8.0.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.jasperreports</groupId>
+      <artifactId>jasperreports</artifactId>
+      <version>6.4.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.itextpdf</groupId>
+          <artifactId>itextpdf</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.olap4j</groupId>
+          <artifactId>olap4j</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+  </dependencies>
+</project>

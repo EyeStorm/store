@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="adminDb">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.17">
+    <root id="1">
+      <ServerVersion>3.25.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="address"/>
+    <table id="7" parent="2" name="brand"/>
+    <table id="8" parent="2" name="client"/>
+    <table id="9" parent="2" name="client_phones"/>
+    <table id="10" parent="2" name="client_type"/>
+    <table id="11" parent="2" name="employee"/>
+    <table id="12" parent="2" name="employee_phones"/>
+    <table id="13" parent="2" name="fone"/>
+    <table id="14" parent="2" name="image"/>
+    <table id="15" parent="2" name="item"/>
+    <table id="16" parent="2" name="language"/>
+    <table id="17" parent="2" name="product"/>
+    <table id="18" parent="2" name="product_tag"/>
+    <table id="19" parent="2" name="product_type"/>
+    <table id="20" parent="2" name="role"/>
+    <table id="21" parent="2" name="sale"/>
+    <table id="22" parent="2" name="sale_items"/>
+    <table id="23" parent="2" name="sale_tag"/>
+    <table id="24" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="25" parent="2" name="supplier"/>
+    <table id="26" parent="2" name="tag"/>
+    <table id="27" parent="2" name="user"/>
+    <table id="28" parent="2" name="user_role"/>
+    <column id="29" parent="6" name="address_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="30" parent="6" name="cep">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="31" parent="6" name="city">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="32" parent="6" name="complement">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="33" parent="6" name="country">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="34" parent="6" name="number">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="35" parent="6" name="state">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="36" parent="6" name="rua">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="37" parent="6" name="suburb">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="38" parent="6">
+      <ColNames>address_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="7" name="brand_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="40" parent="7" name="additional_information">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="41" parent="7" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="42" parent="7" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="43" parent="7">
+      <ColNames>brand_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="8" name="client_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="45" parent="8" name="cpf">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="46" parent="8" name="address_address_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="47" parent="8" name="client_type_client_type_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="48" parent="8" name="user_user_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <key id="49" parent="8">
+      <ColNames>client_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="9" name="client_client_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="9" name="phones_fone_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="10" name="client_type_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="53" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="54" parent="10">
+      <ColNames>client_type_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="11" name="employee_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="56" parent="11" name="cpf">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="57" parent="11" name="address_address_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="58" parent="11" name="user_user_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <key id="59" parent="11">
+      <ColNames>employee_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="12" name="employee_employee_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="12" name="phones_fone_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="13" name="fone_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="63" parent="13" name="code">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="64" parent="13" name="number">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="65" parent="13" name="client_client_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="66" parent="13" name="employee_employee_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="67" parent="13">
+      <ColNames>fone_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="14" name="image_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="69" parent="14" name="path">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="70" parent="14" name="product_product_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="71" parent="14">
+      <ColNames>image_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="15" name="item_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="73" parent="15" name="discount">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="74" parent="15" name="quantity">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="75" parent="15" name="tax">
+      <Position>4</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="76" parent="15" name="total_price">
+      <Position>5</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="77" parent="15" name="product_product_id">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="78" parent="15">
+      <ColNames>item_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="16" name="language_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="80" parent="16" name="country_code">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="81" parent="16" name="is_default">
+      <Position>3</Position>
+      <DataType>char|0s</DataType>
+    </column>
+    <column id="82" parent="16" name="language_code">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="83" parent="16" name="language_name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="84" parent="16">
+      <ColNames>language_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="85" parent="17" name="product_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="86" parent="17" name="buy_price">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="87" parent="17" name="created_at">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="88" parent="17" name="description">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="89" parent="17" name="initial_cost_price">
+      <Position>5</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="90" parent="17" name="initial_stock">
+      <Position>6</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="91" parent="17" name="name">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="92" parent="17" name="retail_price">
+      <Position>8</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="93" parent="17" name="sku">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="94" parent="17" name="updated_at">
+      <Position>10</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="95" parent="17" name="weight">
+      <Position>11</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="96" parent="17" name="wholesale_price">
+      <Position>12</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="97" parent="17" name="brand_brand_id">
+      <Position>13</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="98" parent="17" name="product_type_addres_id">
+      <Position>14</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="99" parent="17" name="supplier_supplier_id">
+      <Position>15</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="100" parent="17">
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="101" parent="18" name="product_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="18" name="tag_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="19" name="addres_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="104" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="105" parent="19">
+      <ColNames>addres_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="106" parent="20" name="role_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="107" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="108" parent="20" name="role">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="109" parent="20" name="sqlite_autoindex_role_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>role</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="20">
+      <ColNames>role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="111" parent="20">
+      <ColNames>role</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_role_1</UnderlyingIndexName>
+    </key>
+    <column id="112" parent="21" name="sale_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="113" parent="21" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="114" parent="21" name="formatter">
+      <Position>3</Position>
+      <DataType>blob|0s</DataType>
+    </column>
+    <column id="115" parent="21" name="issue_date">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="116" parent="21" name="message">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="117" parent="21" name="reference">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="118" parent="21" name="sale_code">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="119" parent="21" name="shipment_date">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="120" parent="21" name="state">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="121" parent="21" name="total">
+      <Position>10</Position>
+      <DataType>double precision|0s</DataType>
+    </column>
+    <column id="122" parent="21" name="total_units">
+      <Position>11</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="123" parent="21" name="cliente_client_id">
+      <Position>12</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="124" parent="21" name="fone_fone_id">
+      <Position>13</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="125" parent="21">
+      <ColNames>sale_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="126" parent="22" name="sale_sale_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="22" name="items_item_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="23" name="sale_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="23" name="tag_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="24" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="131" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="132" parent="24" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="133" parent="24" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="134" parent="24" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="135" parent="25" name="supplier_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="136" parent="25" name="company_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="137" parent="25" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="138" parent="25" name="addres_address_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <key id="139" parent="25">
+      <ColNames>supplier_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="140" parent="26" name="tag_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="141" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="142" parent="26">
+      <ColNames>tag_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="143" parent="27" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="144" parent="27" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="145" parent="27" name="is_login">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="146" parent="27" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="147" parent="27" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="148" parent="27" name="photo_path">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="149" parent="27" name="sqlite_autoindex_user_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>email</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="150" parent="27">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="151" parent="27">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
+    </key>
+    <column id="152" parent="28" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="153" parent="28" name="role_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+  </database-model>
+</dataSource>

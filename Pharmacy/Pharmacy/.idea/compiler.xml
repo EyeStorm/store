@@ -8,9 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="services-impl" />
-        <module name="repositories" />
         <module name="services-api" />
         <module name="models" />
+        <module name="repositories" />
+        <module name="core" />
         <module name="screen" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Pharmacy" options="-parameters" />
+      <module name="core" options="-parameters" />
       <module name="models" options="-parameters" />
       <module name="repositories" options="-parameters" />
       <module name="screen" options="-parameters" />

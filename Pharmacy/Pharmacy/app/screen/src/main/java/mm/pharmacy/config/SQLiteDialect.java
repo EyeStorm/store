@@ -4,6 +4,7 @@ import org.hibernate.JDBCException;
 import org.hibernate.ScrollMode;
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.function.*;
+import org.hibernate.dialect.identity.IdentityColumnSupport;
 import org.hibernate.dialect.pagination.AbstractLimitHandler;
 import org.hibernate.dialect.pagination.LimitHandler;
 import org.hibernate.dialect.pagination.LimitHelper;
@@ -56,6 +57,8 @@ public class SQLiteDialect extends Dialect {
   private static final int SQLITE_NOTFOUND = 12;
   private static final int SQLITE_FULL = 13;
   private static final int SQLITE_CANTOPEN = 14;
+  private static final int SQLITE_PROTOCOL = 15;
+  private static final int SQLITE_TOOBIG = 18;
 
   /*
 	@Override
@@ -65,13 +68,11 @@ public class SQLiteDialect extends Dialect {
   */
 
   // current timestamp support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  private static final int SQLITE_PROTOCOL = 15;
-  private static final int SQLITE_TOOBIG = 18;
   private static final int SQLITE_CONSTRAINT = 19;
-
-  // SQLException support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   private static final int SQLITE_MISMATCH = 20;
   private static final int SQLITE_NOTADB = 26;
+
+  // SQLException support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   private static final ViolatedConstraintNameExtracter EXTRACTER = new TemplatedViolatedConstraintNameExtracter() {
     @Override
     protected String doExtractConstraintName(SQLException sqle) throws NumberFormatException {
@@ -83,10 +84,11 @@ public class SQLiteDialect extends Dialect {
     }
   };
   private final UniqueDelegate uniqueDelegate;
+  private final SQLiteDialectIdentityColumnSupport IDENTITY_COLUMN_SUPPORT = new SQLiteDialectIdentityColumnSupport();
   public SQLiteDialect() {
     registerColumnType(Types.BIT, "boolean");
-    // registerColumnType(Types.FLOAT, "float");
-    // registerColumnType(Types.DOUBLE, "double");
+    //registerColumnType(Types.FLOAT, "float");
+    //registerColumnType(Types.DOUBLE, "double");
     registerColumnType(Types.DECIMAL, "decimal");
     registerColumnType(Types.CHAR, "char");
     registerColumnType(Types.LONGVARCHAR, "longvarchar");
@@ -137,6 +139,11 @@ public class SQLiteDialect extends Dialect {
   public String getCastTypeName(int code) {
     // FIXME
     return super.getCastTypeName(code);
+  }
+
+  @Override
+  public IdentityColumnSupport getIdentityColumnSupport() {
+    return IDENTITY_COLUMN_SUPPORT;
   }
 
   @Override

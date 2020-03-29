@@ -9,6 +9,7 @@
     <module>repositories</module>
     <module>services-api</module>
     <module>services-impl</module>
+    <module>app/core</module>
     <module>app/screen</module>
   </modules>
   <parent>
@@ -72,6 +73,12 @@
             <artifactId>junit-vintage-engine</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>javax</groupId>
+        <artifactId>javaee-api</artifactId>
+        <version>8.0</version>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
 </project>

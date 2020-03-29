@@ -8,7 +8,7 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.stereotype.Component;
 
 @Component
-@FxmlView
+@FxmlView(prefix = "fxml/screen")
 public class MainWindow {
 
   private final FxControllerAndView<SomeDialog, VBox> someDialog;
@@ -26,5 +26,4 @@ public class MainWindow {
       actionEvent -> someDialog.getController().show()
     );
   }
-
 }
